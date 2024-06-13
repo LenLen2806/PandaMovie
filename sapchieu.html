@@ -10,6 +10,19 @@
     <!-- Link Swiper CSS -->
     <link href="swiper-bundle.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @media(max-width:530px) {
+            .sapchieu {
+                margin-top: 100px !important;
+            }
+        }
+
+        @media(max-width:400px) {
+            .sapchieu {
+                margin-top: 80px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -17,13 +30,15 @@
     <header>
         <div class="nav container">
             <!-- Logo -->
-            <a href="trangchu.html"> <img src="logo.png" alt="panda_logo" id="logo"></a>
+            <a href="trangchu.html"> <img src="images/logo.png" alt="panda_logo" id="logo"></a>
             <div class="search-box">
-                <input type="search" name="" id="search-input" placeholder="Nhập tên phim">
-                <i class='bx bx-search-alt'></i>
+                <a href="timkiem.html"><i class='bx bx-search-alt'></i></a>
+                <i class='bx bx-bell'></i>
+                <a href="dangnhap.html"><i class='bx bx-user-circle'></i></a>
             </div>
             <div class="navbar">
-                <ul>
+                <i class='bx bx-menu' onclick="toggleMenu()"></i>
+                <ul class="main-nav" id="menuu">
                     <li>
                         <a href="trangchu.html" class="nav-link">
                             <i class='bx bx-home'></i>
@@ -60,7 +75,7 @@
     </header>
     <!-- End Header -->
     <!-- Sắp Chiếu -->
-    <section class="tinhcam container" id="tinhcam" style="margin-top: 120px">
+    <section class="sapchieu container" id="sapchieu" style="margin-top: 150px">
         <!-- Heading -->
         <div class="heading">
             <h2 class="heading-title">PHIM SẮP CHIẾU</h2>
@@ -69,7 +84,7 @@
         <div class="movies-content">
             <!-- Movies 1 -->
             <div class="movie-box">
-                <img src="truongtuongtu.jpg" alt="Trường Tương Tư 2" class="movie-box-img">
+                <img src="images/truongtuongtu.jpg" alt="Trường Tương Tư 2" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -82,7 +97,7 @@
             </div>
             <!-- Movies 2 -->
             <div class="movie-box">
-                <img src="kungpu.jpg" alt="Kungfu Panda 5" class="movie-box-img">
+                <img src="images/kungpu.jpg" alt="Kungfu Panda 5" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -95,12 +110,12 @@
             </div>
             <!-- Movies 3 -->
             <div class="movie-box">
-                <img src="meobeosieuquay.jpg" alt="Mèo Béo Siêu Quậy" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
+                <img src="images/meobeosieuquay.jpg" alt="Mèo Béo Siêu Quậy" class="movie-box-img">
+                <a href="meobeosieuquay.html" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
                 <div class="box-text">
-                    <a href="#" class="box-text-link">
+                    <a href="meobeosieuquay.html" class="box-text-link">
                         <h2 class="movie-title">Mèo Béo Siêu Quậy</h2>
                         <span class="movie-type">Garfield</span>
                     </a>
@@ -109,14 +124,13 @@
         </div>
     </section>
 
-    <hr>
     <footer class="footer container">
         <div class="main-footer">
-            <a href="trangchu.html"><img src="logo.png" alt="panda_logo" id="logo-footer"></a>
+            <a href="trangchu.html"><img src="images/logo.png" alt="panda_logo" id="logo-footer"></a>
             <div class="main-footer-1">
                 <h3>Panda Movie</h3>
                 <p>Giới Thiệu</p>
-                <p>Các Gói Dịch Vụ</p>
+                <p>Các Gói Xem Phim</p>
                 <p>Thông Tin</p>
             </div>
             <div class="main-footer-1">

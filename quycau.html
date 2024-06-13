@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panda Movie</title>
+    <title>PM-Quỷ Cẩu</title>
     <!-- Link to CSS -->
     <link href="panda.css" rel="stylesheet" type="text/css">
     <!-- Link Swiper CSS -->
@@ -18,13 +17,15 @@
     <header>
         <div class="nav container">
             <!-- Logo -->
-            <a href="trangchu.html"> <img src="logo.png" alt="panda_logo" id="logo"></a>
+            <a href="trangchu.html"> <img src="images/logo.png" alt="panda_logo" id="logo"></a>
             <div class="search-box">
-                <input type="search" name="" id="search-input" placeholder="Nhập tên phim">
-                <i class='bx bx-search-alt'></i>
+                <a href="timkiem.html"><i class='bx bx-search-alt'></i></a>
+                <i class='bx bx-bell'></i>
+                <a href="dangnhap.html"><i class='bx bx-user-circle'></i></a>
             </div>
             <div class="navbar">
-                <ul>
+                <i class='bx bx-menu' onclick="toggleMenu()"></i>
+                <ul class="main-nav" id="menuu">
                     <li>
                         <a href="trangchu.html" class="nav-link">
                             <i class='bx bx-home'></i>
@@ -60,9 +61,9 @@
         </div>
     </header>
     <!-- End Header -->
- <!-- Play Movie -->
+    <!-- Play Movie -->
     <div class="play-container container" style="margin-top: 120px;">
-        <img src="quycau.jpg" alt="Quỷ Cẩu" class="play-img">
+        <img src="images/quycau.jpg" alt="Quỷ Cẩu" class="play-img">
         <div class="play-text">
             <h1>Quỷ Cẩu</h1>
             <h3>Crimson Snout</h3>
@@ -80,45 +81,54 @@
                 <i class='bx bxs-star'></i>
                 <i class='bx bxs-star-half'></i>
             </p>
-            <a href="#"><button class="xemphim">XEM PHIM</button></a>
+            <a href="watch_quycau.html"><button class="xemphim">XEM PHIM</button></a>
         </div>
     </div>
- <!-- Content -->
-    <hr>
+    <!-- Content -->
     <div class="noidung container">
         <h2>NỘI DUNG CHI TIẾT</h2>
         <p>
-            Phim Quỷ Cẩu là bộ phim có câu chuyện kể về cuộc hành trình đầy căng thẳng của một người con trở về quê nhà để lo đám tang cho người cha sau cái chết đáng sợ của ông. Trong lúc đau buồn và lo sợ, Nam phải đối mặt với một bí mật nặng nề: bạn gái của anh đang mang thai, một sự thật mà anh phải giấu kín trước gia đình. Nhưng rắc rối không chỉ dừng lại ở đó. Nam bắt đầu mơ thấy gia đình của mình bị giết sau khi mai táng ông, và con chó trắng của gia đình - Mít, bắt đầu có những biểu hiện kỳ lạ. Trong khi ông Quyết, bà Thúy và bà Liễu tin vào sự linh thiêng của thầy cúng, Nam lại nghi ngờ về lò mổ chó truyền thống của gia đình, và quyết định tiến hành một cuộc điều tra riêng để làm sáng tỏ những sự kiện bí ẩn đang diễn ra. Cuộc phiêu lưu của Nam không chỉ là cuộc truy tìm sự thật mà còn là cuộc hành trình vào tâm hồn của mình và gia đình, nơi mà những bí ẩn và âm mưu chưa từng được tiết lộ sẽ dần dần hé mở. Quỷ Cẩu không chỉ là một bộ phim kinh dị mà còn là một tác phẩm tâm lý sâu sắc, với những cung bậc cảm xúc, từ sự hoang mang, lo sợ cho đến lòng tin và sự hy vọng.
+            Phim Quỷ Cẩu là bộ phim có câu chuyện kể về cuộc hành trình đầy căng thẳng của một người con trở về quê nhà
+            để lo đám tang cho người cha sau cái chết đáng sợ của ông. Trong lúc đau buồn và lo sợ, Nam phải đối mặt với
+            một bí mật nặng nề: bạn gái của anh đang mang thai, một sự thật mà anh phải giấu kín trước gia đình. Nhưng
+            rắc rối không chỉ dừng lại ở đó. Nam bắt đầu mơ thấy gia đình của mình bị giết sau khi mai táng ông, và con
+            chó trắng của gia đình - Mít, bắt đầu có những biểu hiện kỳ lạ. Trong khi ông Quyết, bà Thúy và bà Liễu tin
+            vào sự linh thiêng của thầy cúng, Nam lại nghi ngờ về lò mổ chó truyền thống của gia đình, và quyết định
+            tiến hành một cuộc điều tra riêng để làm sáng tỏ những sự kiện bí ẩn đang diễn ra. Cuộc phiêu lưu của Nam
+            không chỉ là cuộc truy tìm sự thật mà còn là cuộc hành trình vào tâm hồn của mình và gia đình, nơi mà những
+            bí ẩn và âm mưu chưa từng được tiết lộ sẽ dần dần hé mở. Quỷ Cẩu không chỉ là một bộ phim kinh dị mà còn là
+            một tác phẩm tâm lý sâu sắc, với những cung bậc cảm xúc, từ sự hoang mang, lo sợ cho đến lòng tin và sự hy
+            vọng.
         </p>
     </div>
- <div class="actor container">
+    <div class="actor container">
         <h2>DIỄN VIÊN</h2>
         <div class="actor-main">
-          <div class="actor-0">
-                <img src="Quangtuan.jpg" alt="Quang Tuấn" class="main-actor-img">
+            <div class="actor-0">
+                <img src="images/Quangtuan.jpg" alt="Quang Tuấn" class="main-actor-img">
                 <p>Quang Tuấn</p>
             </div>
-          <div class="actor-0">
-                <img src="Namthu.jpg" alt="Nam Thư" class="main-actor-img">
+            <div class="actor-0">
+                <img src="images/Namthu.jpg" alt="Nam Thư" class="main-actor-img">
                 <p>Nam Thư</p>
             </div>
-           <div class="actor-0">
-                <img src="Vandung.jpg" alt="Vân Dung" class="main-actor-img">
+            <div class="actor-0">
+                <img src="images/Vandung.jpg" alt="Vân Dung" class="main-actor-img">
                 <p>Vân Dung</p>
             </div>
             <div class="actor-0">
-                <img src="Kimxuan.jpg" alt="Kim Xuân" class="main-actor-img">
+                <img src="images/Kimxuan.jpg" alt="Kim Xuân" class="main-actor-img">
                 <p>Kim Xuân</p>
             </div>
         </div>
     </div>
-<section class="goiy container" id="goiy">
+    <section class="goiy container" id="goiy">
         <h2 class="goiy-heading">CÓ THỂ BẠN SẼ THÍCH</h2>
         <!-- Content -->
-        <div class="movies-content-goiy">
-             <!-- Movies 1 -->
+        <div class="movies-content">
+            <!-- Movies 1 -->
             <div class="movie-box">
-                <img src="squidgame.jpg" alt="Squid Game" class="movie-box-img">
+                <img src="images/squidgame.jpg" alt="Squid Game" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -129,9 +139,9 @@
                     </a>
                 </div>
             </div>
-              <!-- Movies 2 -->
+            <!-- Movies 2 -->
             <div class="movie-box">
-                <img src="conan.jpg" alt="Thám tử lừng danh Conan" class="movie-box-img">
+                <img src="images/conan.jpg" alt="Thám tử lừng danh Conan" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -143,22 +153,22 @@
                 </div>
             </div>
 
-             <!-- Movies 3 -->
+            <!-- Movies 3 -->
             <div class="movie-box">
-                <img src="quatmotrungma.jpg" alt="Quật Mộ Trùng Ma" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
+                <img src="images/quatmotrungma.jpg" alt="Quật Mộ Trùng Ma" class="movie-box-img">
+                <a href="quatmotrungma.html" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
                 <div class="box-text">
-                    <a href="#" class="box-text-link">
+                    <a href="quatmotrungma.html" class="box-text-link">
                         <h2 class="movie-title">Quật Mộ Trùng Ma</h2>
                         <span class="movie-type">Exhuma</span>
                     </a>
                 </div>
             </div>
-              <!-- Movies 4 -->
+            <!-- Movies 4 -->
             <div class="movie-box">
-                <img src="kungpu.jpg" alt="Kungfu Panda 5" class="movie-box-img">
+                <img src="images/kungpu.jpg" alt="Kungfu Panda 5" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -169,9 +179,9 @@
                     </a>
                 </div>
             </div>
-             <!-- Movies 5 -->
+            <!-- Movies 5 -->
             <div class="movie-box">
-                <img src="keanhon.jpg" alt="Kẻ Ăn Hồn" class="movie-box-img">
+                <img src="images/keanhon.jpg" alt="Kẻ Ăn Hồn" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -182,9 +192,9 @@
                     </a>
                 </div>
             </div>
-           <!-- Movies 6 -->
+            <!-- Movies 6 -->
             <div class="movie-box">
-                <img src="quyco.jpg" alt="Quý Cô Mạng Nhện" class="movie-box-img">
+                <img src="images/quyco.jpg" alt="Quý Cô Mạng Nhện" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -195,9 +205,9 @@
                     </a>
                 </div>
             </div>
-         <!-- Movies 7 -->
+            <!-- Movies 7 -->
             <div class="movie-box">
-                <img src="matvuong.jpg" alt="Mật Vụ Ong" class="movie-box-img">
+                <img src="images/matvuong.jpg" alt="Mật Vụ Ong" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -208,9 +218,9 @@
                     </a>
                 </div>
             </div>
-          <!-- Movies 8 -->
+            <!-- Movies 8 -->
             <div class="movie-box">
-                <img src="tranchien.jpg" alt="Trận Chiến Tàn Khốc" class="movie-box-img">
+                <img src="images/tranchien.jpg" alt="Trận Chiến Tàn Khốc" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -221,9 +231,9 @@
                     </a>
                 </div>
             </div>
-           <!-- Movies 9 -->
+            <!-- Movies 9 -->
             <div class="movie-box">
-                <img src="tetlangdianguc.jpg" alt="Tết Làng Địa Ngục" class="movie-box-img">
+                <img src="images/tetlangdianguc.jpg" alt="Tết Làng Địa Ngục" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -234,9 +244,9 @@
                     </a>
                 </div>
             </div>
-           <!-- Movies 10 -->
+            <!-- Movies 10 -->
             <div class="movie-box">
-                <img src="doathon.jpg" alt="Đoạt Hồn" class="movie-box-img">
+                <img src="images/doathon.jpg" alt="Đoạt Hồn" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -247,20 +257,19 @@
                     </a>
                 </div>
             </div>
-               </div>
-            </div>
+        </div>
+        </div>
         </div>
     </section>
 
-    <hr>
-  <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer container">
         <div class="main-footer">
-            <a href="trangchu.html"><img src="logo.png" alt="panda_logo" id="logo-footer"></a>
+            <a href="trangchu.html"><img src="images/logo.png" alt="panda_logo" id="logo-footer"></a>
             <div class="main-footer-1">
                 <h3>Panda Movie</h3>
                 <p>Giới Thiệu</p>
-                <p>Các Gói Dịch Vụ</p>
+                <p>Các Gói Xem Phim</p>
                 <p>Thông Tin</p>
             </div>
             <div class="main-footer-1">
@@ -290,18 +299,3 @@
 </body>
 
 </html>
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-

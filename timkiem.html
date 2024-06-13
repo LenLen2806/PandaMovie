@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,10 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panda Movie</title>
     <!-- Link to CSS -->
-    <link href="timkiem.css" rel="stylesheet" type="text/css">
+    <link href="panda.css" rel="stylesheet" type="text/css">
     <!-- Link Swiper CSS -->
     <link href="swiper-bundle.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @media(max-width: 963px) {
+            .main-container-tk {
+                z-index: 0;
+            }
+
+            .navbar .main-nav {
+                background: rgba(15, 15, 15, 0.9);
+                z-index: 99;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -18,13 +29,15 @@
     <header>
         <div class="nav container">
             <!-- Logo -->
-            <a href="trangchu.html"> <img src="logo.png" alt="panda_logo" id="logo"></a>
+            <a href="trangchu.html"> <img src="images/logo.png" alt="panda_logo" id="logo"></a>
             <div class="search-box">
-                <input type="text" name="" id="search-input" placeholder="Nhập tên phim" onkeyup="search()">
-                <i class='bx bx-search-alt'></i>
+                <a href="timkiem.html"><i class='bx bx-search-alt'></i></a>
+                <i class='bx bx-bell'></i>
+                <a href="dangnhap.html"><i class='bx bx-user-circle'></i></a>
             </div>
             <div class="navbar">
-                <ul>
+                <i class='bx bx-menu' onclick="toggleMenu()"></i>
+                <ul class="main-nav" id="menuu">
                     <li>
                         <a href="trangchu.html" class="nav-link">
                             <i class='bx bx-home'></i>
@@ -61,46 +74,15 @@
     </header>
     <!-- End Header -->
     <!-- Main -->
-    <!-- Phim Bộ -->
-    <section class="phimbo container" id="phimbo" style="margin-top: 120px;">
-        <!-- Heading -->
-        <div class="heading">
-            <h2 class="heading-title">Xu hướng gần đây</h2>
-        </div>
-        <!-- Content -->
-        <div class="movies-content">
-            <!-- Movies 1 -->
-            <div class="movie-box">
-                <img src="chausinhnhuco.jpg" alt="Trường An Như Cố" class="movie-box-img">
-                <a href="truongannhuco.html" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
-                <div class="box-text">
-                    <a href="truongannhuco.html" class="box-text-link">
-                        <h2 class="movie-title">Trường An Như Cố</h2>
-                        <span class="movie-type">One And Only</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Movies 2 -->
-            <div class="movie-box">
-                <img src="chiecbatlua.jpg" alt="Lighter And Princess" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
-                <div class="box-text">
-                    <a href="#" class="box-text-link">
-                        <h2 class="movie-title">Chiếc Bật Lửa Và Váy Công Chúa</h2>
-                        <span class="movie-type">Lighter And Princess</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Movies 3 -->
-            <div class="movie-box">
-                <img src="Lovelyrunner.jpg" alt="Lovely Runner" class="movie-box-img">
-                <a href="lovelyrunner.html" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
+    <section class="main-container-tk">
+        <form>
+            <i class='bx bx-search-alt'></i>
+            <input type="text" name="" id="search-item" placeholder="Nhập tên phim" onkeyup="search()">
+        </form>
+        <h1>BẠN MUỐN TÌM:</h1>
+        <div class="movie-list-tk">
+            <div class="movie">
+                <img src="images/Lovelyrunner.jpg" alt="" class="movie-box-img">
                 <div class="box-text">
                     <a href="lovelyrunner.html" class="box-text-link">
                         <h2 class="movie-title">Cõng Anh Mà Chạy</h2>
@@ -108,65 +90,8 @@
                     </a>
                 </div>
             </div>
-            <!-- Movies 4 -->
-            <div class="movie-box">
-                <img src="queenoftears.jpg" alt="Queen Of Tears" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
-                <div class="box-text">
-                    <a href="#" class="box-text-link">
-                        <h2 class="movie-title">Nữ Hoàng Nước Mắt</h2>
-                        <span class="movie-type">Queen Of Tears</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Movies 5 -->
-            <div class="movie-box">
-                <img src="cuocchienthuongluu.jpg" alt="Penthouse" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
-                <div class="box-text">
-                    <a href="#" class="box-text-link">
-                        <h2 class="movie-title">Cuộc Chiến Thượng Lưu</h2>
-                        <span class="movie-type">Penthouse</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Movies 6 -->
-            <div class="movie-box">
-                <img src="truongnguyettanminh.jpg" alt="Trường Nguyệt Tẫn Minh" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
-                <div class="box-text">
-                    <a href="#" class="box-text-link">
-                        <h2 class="movie-title">Trường Nguyệt Tẫn Minh</h2>
-                        <span class="movie-type">Till The End Of The Moon</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Movies 7 -->
-            <div class="movie-box">
-                <img src="khianhchayvephiaem.jpg" alt="Khi Anh Chạy Về Phía Em" class="movie-box-img">
-                <a href="khianhchayvephiaem.html" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
-                <div class="box-text">
-                    <a href="khianhchayvephiaem.html" class="box-text-link">
-                        <h2 class="movie-title">Khi Anh Chạy Về Phía Em</h2>
-                        <span class="movie-type">I When Fly Towards You</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Movies 8 -->
-            <div class="movie-box">
-                <img src="squidgame.jpg" alt="Squid Game" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
+            <div class="movie">
+                <img src="images/squidgame.jpg" alt="Squid Game" class="movie-box-img">
                 <div class="box-text">
                     <a href="#" class="box-text-link">
                         <h2 class="movie-title">Trò Chơi Con Mực</h2>
@@ -174,12 +99,26 @@
                     </a>
                 </div>
             </div>
-            <!-- Movies 9 -->
-            <div class="movie-box">
-                <img src="hoyeu.jpg" alt="Hồ Yêu Tiểu Hồng Nương" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
+            <div class="movie">
+                <img src="images/khianhchayvephiaem.jpg" alt="" class="movie-box-img">
+                <div class="box-text">
+                    <a href="khianhchayvephiaem.html" class="box-text-link">
+                        <h2 class="movie-title">Khi Anh Chạy Về Phía Em</h2>
+                        <span class="movie-type">I When Fly Towards You</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/truongnguyettanminh.jpg" alt="Trường Nguyệt Tẫn Minh" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Trường Nguyệt Tẫn Minh</h2>
+                        <span class="movie-type">Till The End Of The Moon</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/hoyeu.jpg" alt="Hồ Yêu Tiểu Hồng Nương" class="movie-box-img">
                 <div class="box-text">
                     <a href="#" class="box-text-link">
                         <h2 class="movie-title">Hồ Yêu Tiểu Hồng Nương</h2>
@@ -187,12 +126,35 @@
                     </a>
                 </div>
             </div>
-            <!-- Movies 10 -->
-            <div class="movie-box">
-                <img src="venhadicon.jpeg" alt="Về Nhà Đi Con" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
+            <div class="movie">
+                <img src="images/chiecbatlua.jpg" alt="Lighter And Princess" class="movie-box-img">
+                <div class="box-text">
+                    <a href="chiecbatluavavaycongchua.html" class="box-text-link">
+                        <h2 class="movie-title">Chiếc Bật Lửa Và Váy Công Chúa</h2>
+                        <span class="movie-type">Lighter And Princess</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/queenoftears.jpg" alt="Queen Of Tears" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Nữ Hoàng Nước Mắt</h2>
+                        <span class="movie-type">Queen Of Tears</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/cuocchienthuongluu.jpg" alt="Penthouse" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Cuộc Chiến Thượng Lưu</h2>
+                        <span class="movie-type">Penthouse</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/venhadicon.jpeg" alt="Về Nhà Đi Con" class="movie-box-img">
                 <div class="box-text">
                     <a href="#" class="box-text-link">
                         <h2 class="movie-title">Về Nhà Đi Con</h2>
@@ -200,12 +162,8 @@
                     </a>
                 </div>
             </div>
-            <!-- Movies 11 -->
-            <div class="movie-box">
-                <img src="truongtuongtu.jpg" alt="Trường Tương Tư 2" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
+            <div class="movie">
+                <img src="images/truongtuongtu.jpg" alt="Trường Tương Tư 2" class="movie-box-img">
                 <div class="box-text">
                     <a href="#" class="box-text-link">
                         <h2 class="movie-title">Trường Tương Tư 2</h2>
@@ -213,12 +171,8 @@
                     </a>
                 </div>
             </div>
-            <!-- Movies 12 -->
-            <div class="movie-box">
-                <img src="phongthandiennghia.jpg" alt="Phong Thần Diễn Nghĩa" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
+            <div class="movie">
+                <img src="images/phongthandiennghia.jpg" alt="Phong Thần Diễn Nghĩa" class="movie-box-img">
                 <div class="box-text">
                     <a href="#" class="box-text-link">
                         <h2 class="movie-title">Phong Thần Diễn Nghĩa</h2>
@@ -226,12 +180,8 @@
                     </a>
                 </div>
             </div>
-            <!-- Movies 13 -->
-            <div class="movie-box">
-                <img src="tanbachnuongtu.jpg" alt="Tân Bạch Nương Tử Truyền Kì" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
+            <div class="movie">
+                <img src="images/tanbachnuongtu.jpg" alt="Tân Bạch Nương Tử Truyền Kì" class="movie-box-img">
                 <div class="box-text">
                     <a href="#" class="box-text-link">
                         <h2 class="movie-title">Tân Bạch Nương Tử <br>Truyền Kì</h2>
@@ -239,12 +189,8 @@
                     </a>
                 </div>
             </div>
-            <!-- Movies 14-->
-            <div class="movie-box">
-                <img src="daitong.png" alt="Đại Tống Thiếu Niên Chí" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
+            <div class="movie">
+                <img src="images/daitong.png" alt="Đại Tống Thiếu Niên Chí" class="movie-box-img">
                 <div class="box-text">
                     <a href="#" class="box-text-link">
                         <h2 class="movie-title">Đại Tống Thiếu Niên Chí</h2>
@@ -252,12 +198,8 @@
                     </a>
                 </div>
             </div>
-            <!-- Movies 15-->
-            <div class="movie-box">
-                <img src="thanhvanchi.jpg" alt="Thanh Vân Chí" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
+            <div class="movie">
+                <img src="images/thanhvanchi.jpg" alt="Thanh Vân Chí" class="movie-box-img">
                 <div class="box-text">
                     <a href="#" class="box-text-link">
                         <h2 class="movie-title">Thanh Vân Chí</h2>
@@ -265,12 +207,8 @@
                     </a>
                 </div>
             </div>
-            <!-- Movies 16 -->
-            <div class="movie-box">
-                <img src="sonhalenh.jpg" alt="Sơn Hà Lệnh" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
+            <div class="movie">
+                <img src="images/sonhalenh.jpg" alt="Sơn Hà Lệnh" class="movie-box-img">
                 <div class="box-text">
                     <a href="#" class="box-text-link">
                         <h2 class="movie-title">Sơn Hà Lệnh</h2>
@@ -278,12 +216,8 @@
                     </a>
                 </div>
             </div>
-            <!-- Movies 17 -->
-            <div class="movie-box">
-                <img src="hoathiencot.jpg" alt="Hoa Thiên Cốt" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
+            <div class="movie">
+                <img src="images/hoathiencot.jpg" alt="Hoa Thiên Cốt" class="movie-box-img">
                 <div class="box-text">
                     <a href="#" class="box-text-link">
                         <h2 class="movie-title">Hoa Thiên Cốt</h2>
@@ -291,56 +225,204 @@
                     </a>
                 </div>
             </div>
-
-            <!-- Movies 18 -->
-            <div class="movie-box">
-                <img src="oihoangde.jpg" alt="Ôi Hoàng Đế Bệ Hạ Của Ta" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
-                    <i class='bx bx-right-arrow'></i>
-                </a>
+            <div class="movie">
+                <img src="images/hoathiencot.jpg" alt="Hoa Thiên Cốt" class="movie-box-img">
                 <div class="box-text">
                     <a href="#" class="box-text-link">
-                        <h2 class="movie-title">Ôi Hoàng Đế Bệ Hạ<br> Của Ta</h2>
-                        <span class="movie-type">Oh My Emperor</span>
+                        <h2 class="movie-title">Hoa Thiên Cốt</h2>
+                        <span class="movie-type">The Journey Of Flower</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/quatmotrungma.jpg" alt="Quật Mộ Trùng Ma" class="movie-box-img">
+                <div class="box-text">
+                    <a href="quatmotrungma.html" class="box-text-link">
+                        <h2 class="movie-title">Quật Mộ Trùng Ma</h2>
+                        <span class="movie-type">Exhuma</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/quycau.jpg" alt="Quỷ Cẩu" class="movie-box-img">
+                <div class="box-text">
+                    <a href="quycau.html" class="box-text-link">
+                        <h2 class="movie-title">Quỷ Cẩu</h2>
+                        <span class="movie-type"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/daophopiano.jpg" alt="Đào, Phở Và Piano" class="movie-box-img">
+                <div class="box-text">
+                    <a href="daophovapiano.html" class="box-text-link">
+                        <h2 class="movie-title">Đào, Phở Và Piano</h2>
+                        <span class="movie-type"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/kungpu.jpg" alt="Kungfu Panda 5" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Kungfu Panda 5</h2>
+                        <span class="movie-type"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/meobeosieuquay.jpg" alt="Mèo Béo Siêu Quậy" class="movie-box-img">
+                <div class="box-text">
+                    <a href="meobeosieuquay.html" class="box-text-link">
+                        <h2 class="movie-title">Mèo Béo Siêu Quậy</h2>
+                        <span class="movie-type">Garfield</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/keanhon.jpg" alt="Kẻ Ăn Hồn" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Kẻ Ăn Hồn</h2>
+                        <span class="movie-type"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/doathon.jpg" alt="Đoạt Hồn" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Đoạt Hồn</h2>
+                        <span class="movie-type"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="movie">
+                <img src="images/doremon.jpg" alt="Doraemon" class="movie-box-img">
+                <div class="box-text">
+                    <a href="doraemon.html" class="box-text-link">
+                        <h2 class="movie-title">Chú Mèo Máy Đến Từ Tương Lai</h2>
+                        <span class="movie-type">Doraemon</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/conan.jpg" alt="Conan" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Thám Tử Lừng Danh Conan</h2>
+                        <span class="movie-type">Conan</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/winx.jpg" alt="Winx" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Winx Công Chúa Phép Thuật</h2>
+                        <span class="movie-type">Winx Club</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/hellojadoo.jpg" alt="Hello Jadoo" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Xin Chào Jadoo</h2>
+                        <span class="movie-type">Hello Jadoo</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/kungpu.jpg" alt="Kungfu Panda 5" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Kungfu Panda 5</h2>
+                        <span class="movie-type"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/quyco.jpg" alt="Quý Cô Mạng Nhện" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Quý Cô Mạng Nhện</h2>
+                        <span class="movie-type">Madame Web</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/matvuong.jpg" alt="Mật Vụ Ong" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Mật Vụ Ong</h2>
+                        <span class="movie-type">The Beekeeper</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/tranchien.jpg" alt="Trận Chiến Tàn Khốc" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Trận Chiến Tàn Khốc</h2>
+                        <span class="movie-type">Land Of Bad</span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/tetlangdianguc.jpg" alt="Tết Làng Địa Ngục" class="movie-box-img">
+                <div class="box-text">
+                    <a href="#" class="box-text-link">
+                        <h2 class="movie-title">Tết Làng Địa Ngục</h2>
+                        <span class="movie-type"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/truongannhuco.jpg" alt="Trường An Như Cố" class="movie-box-img">
+                <div class="box-text">
+                    <a href="truongannhuco.html" class="box-text-link">
+                        <h2 class="movie-title">Trường An Như Cố</h2>
+                        <span class="movie-type">One And Only</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
-    <hr>
-    <footer class="footer container">
-        <div class="main-footer">
-            <a href="trangchu.html"><img src="logo.png" alt="panda_logo" id="logo-footer"></a>
-            <div class="main-footer-1">
-                <h3>Panda Movie</h3>
-                <p>Giới Thiệu</p>
-                <p>Các Gói Xem Phim</p>
-                <p>Thông Tin</p>
-            </div>
-            <div class="main-footer-1">
-                <h3>Dịch Vụ</h3>
-                <p>Các Gói Dịch Vụ</p>
-                <p>Quảng Cáo</p>
-            </div>
-            <div class="main-footer-1">
-                <h3>Hỗ Trợ</h3>
-                <p>Trung Tâm Trợ Giúp</p>
-                <p>Liên Hệ:</p>
-                <p><i class='bx bx-phone'></i>1900099999</p>
-                <p><i class='bx bxl-gmail'></i>hotropanda@gmail.com</p>
-            </div>
-            <div class="main-footer-1">
-                <h3>Quy Định</h3>
-                <p>Điều Khoản Sử Dụng</p>
-                <p>Chính Sách Thanh Toán </p>
-                <p>Chính Sách Bảo Mật</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Link Swiper JS -->
-    <script src="swiper-bundle.min.js"></script>
-    <!-- Link to JS -->
-    <script src="timkiemjs.js"></script>
+
+    <!-- JS -->
+    <script>
+        // Tìm kiếm
+        const search = () => {
+            const searchbox = document.getElementById("search-item").value.toUpperCase();
+            const storeitems = document.querySelectorAll('movie-list-tk');
+            const movie = document.querySelectorAll('.movie');
+            const movieTitle = document.getElementsByTagName('h2');
+            for (var i = 0; i < movieTitle.length; i++) {
+                let match = movie[i].getElementsByTagName('h2')[0];
+                if (match) {
+                    let textvalue = match.textContent || match.innerHTML;
+                    if (textvalue.toUpperCase().indexOf(searchbox) > -1) {
+                        movie[i].style.display = "";
+                    } else {
+                        movie[i].style.display = "none";
+                    }
+                }
+            }
+            const h1 = document.getElementsByTagName("h1");
+            // Nếu giá trị của ô input không rỗng
+            if (searchbox !== "") {
+                // Ẩn thẻ h1
+                h1.style.display = "none";
+            }
+        }
+
+        function toggleMenu() {
+            var menu = document.getElementById("menuu");
+            menu.classList.toggle("show");
+        }
+    </script>
 
 </body>
 

@@ -9,6 +9,7 @@
     <link href="panda.css" rel="stylesheet" type="text/css">
     <!-- Link Swiper CSS -->
     <link href="swiper-bundle.min.css" rel="stylesheet">
+    <!-- Link Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -17,13 +18,16 @@
     <header>
         <div class="nav container">
             <!-- Logo -->
-            <a href="trangchu.html"> <img src="logo.png" alt="panda_logo" id="logo"></a>
+            <a href="trangchu.html"> <img src="images/logo.png" alt="panda_logo" id="logo"></a>
             <div class="search-box">
-                <input type="search" name="" id="search-input" placeholder="Nhập tên phim">
-                <i class='bx bx-search-alt'></i>
+                <a href="timkiem.html"><i class='bx bx-search-alt'></i></a>
+                <i class='bx bx-bell'></i>
+                <a href="dangnhap.html"><i class='bx bx-user-circle'></i></a>
             </div>
+
             <div class="navbar">
-                <ul>
+                <i class='bx bx-menu' onclick="toggleMenu()"></i>
+                <ul class="main-nav" id="menuu">
                     <li>
                         <a href="trangchu.html" class="nav-link nav-active">
                             <i class='bx bx-home'></i>
@@ -66,7 +70,7 @@
                 <!-- Movies 0 -->
                 <div class="swiper-slide">
                     <div class="movie-box">
-                        <img src="poster1.jpg" alt="Lovely Runner" class="home-img">
+                        <img src="images/poster1.jpg" alt="Lovely Runner" class="home-img">
                         <div class="home-text">
                             <a href="lovelyrunner.html" class="watch-btn">
                                 <i class='bx bx-right-arrow'></i>
@@ -79,7 +83,7 @@
                 <!-- Movies 1 -->
                 <div class="swiper-slide">
                     <div class="movie-box">
-                        <img src="poster3.jpg" alt="Kung Fu Panda" class="home-img">
+                        <img src="images/poster3.jpg" alt="Kung Fu Panda" class="home-img">
                         <div class="home-text">
                             <a href="#" class="watch-btn">
                                 <i class='bx bx-right-arrow'></i>
@@ -92,7 +96,7 @@
                 <!-- Movies 2 -->
                 <div class="swiper-slide">
                     <div class="movie-box">
-                        <img src="poster2.jpg" alt="Squid Game" class="home-img">
+                        <img src="images/poster2.jpg" alt="Squid Game" class="home-img">
                         <div class="home-text">
                             <a href="#" class="watch-btn">
                                 <i class='bx bx-right-arrow'></i>
@@ -105,9 +109,9 @@
                 <!-- Movies 3 -->
                 <div class="swiper-slide">
                     <div class="movie-box">
-                        <img src="poster4.jpg" alt="Mèo Béo Siêu Quậy" class="home-img">
+                        <img src="images/poster4.jpg" alt="Mèo Béo Siêu Quậy" class="home-img">
                         <div class="home-text">
-                            <a href="#" class="watch-btn">
+                            <a href="meobeosieuquay.html" class="watch-btn">
                                 <i class='bx bx-right-arrow'></i>
                                 <span>Xem ngay</span>
                             </a>
@@ -118,7 +122,7 @@
                 <!-- Movies 4 -->
                 <div class="swiper-slide">
                     <div class="movie-box">
-                        <img src="poster5.jpg" alt="Hồ Yêu Tiểu Hồng Nương" class="home-img">
+                        <img src="images/poster5.jpg" alt="Hồ Yêu Tiểu Hồng Nương" class="home-img">
                         <div class="home-text">
                             <a href="#" class="watch-btn">
                                 <i class='bx bx-right-arrow'></i>
@@ -153,7 +157,7 @@
                 <!-- Movies 0 -->
                 <div class="swiper-slide">
                     <div class="movie-box">
-                        <img src="hoyeu.jpg" alt="Hồ Yêu Tiểu Hồng Nương" class="movie-box-img">
+                        <img src="images/hoyeu.jpg" alt="Hồ Yêu Tiểu Hồng Nương" class="movie-box-img">
                         <a href="#" class="watch-btn play-btn">
                             <i class='bx bx-right-arrow'></i>
                         </a>
@@ -168,7 +172,7 @@
                 <!-- Movies 1 -->
                 <div class="swiper-slide">
                     <div class="movie-box">
-                        <img src="Lovelyrunner.jpg" alt="Lovely Runner" class="movie-box-img">
+                        <img src="images/Lovelyrunner.jpg" alt="Lovely Runner" class="movie-box-img">
                         <a href="lovelyrunner.html" class="watch-btn play-btn">
                             <i class='bx bx-right-arrow'></i>
                         </a>
@@ -183,7 +187,7 @@
                 <!-- Movies 2 -->
                 <div class="swiper-slide">
                     <div class="movie-box">
-                        <img src="queenoftears.jpg" alt="Queen Of Tears" class="movie-box-img">
+                        <img src="images/queenoftears.jpg" alt="Queen Of Tears" class="movie-box-img">
                         <a href="#" class="watch-btn play-btn">
                             <i class='bx bx-right-arrow'></i>
                         </a>
@@ -198,12 +202,12 @@
                 <!-- Movies 3 -->
                 <div class="swiper-slide">
                     <div class="movie-box">
-                        <img src="daophopiano.jpg" alt="Đào, Phở Và Piano" class="movie-box-img">
-                        <a href="#" class="watch-btn play-btn">
+                        <img src="images/daophopiano.jpg" alt="Đào, Phở Và Piano" class="movie-box-img">
+                        <a href="daophovapiano.html" class="watch-btn play-btn">
                             <i class='bx bx-right-arrow'></i>
                         </a>
                         <div class="box-text">
-                            <a href="#" class="box-text-link">
+                            <a href="daophovapiano.html" class="box-text-link">
                                 <h2 class="movie-title">Đào, Phở Và Piano</h2>
                                 <span class="movie-type"></span>
                             </a>
@@ -213,7 +217,7 @@
                 <!-- Movies 4 -->
                 <div class="swiper-slide">
                     <div class="movie-box">
-                        <img src="conan.jpg" alt="Conan" class="movie-box-img">
+                        <img src="images/conan.jpg" alt="Conan" class="movie-box-img">
                         <a href="#" class="watch-btn play-btn">
                             <i class='bx bx-right-arrow'></i>
                         </a>
@@ -228,12 +232,12 @@
                 <!-- Movies 5 -->
                 <div class="swiper-slide">
                     <div class="movie-box">
-                        <img src="quatmotrungma.jpg" alt="Quật Mộ Trùng Ma" class="movie-box-img">
-                        <a href="#" class="watch-btn play-btn">
+                        <img src="images/quatmotrungma.jpg" alt="Quật Mộ Trùng Ma" class="movie-box-img">
+                        <a href="quatmotrungma.html" class="watch-btn play-btn">
                             <i class='bx bx-right-arrow'></i>
                         </a>
                         <div class="box-text">
-                            <a href="#" class="box-text-link">
+                            <a href="quatmotrungma.html" class="box-text-link">
                                 <h2 class="movie-title">Quật Mộ Trùng Ma</h2>
                                 <span class="movie-type">Exhuma</span>
                             </a>
@@ -243,12 +247,12 @@
                 <!-- Movies 6 -->
                 <div class="swiper-slide">
                     <div class="movie-box">
-                        <img src="khianhchayvephiaem.jpg" alt="Khi Anh Chạy Về Phía Em" class="movie-box-img">
-                        <a href="#" class="watch-btn play-btn">
+                        <img src="images/khianhchayvephiaem.jpg" alt="Khi Anh Chạy Về Phía Em" class="movie-box-img">
+                        <a href="khianhchayvephiaem.html" class="watch-btn play-btn">
                             <i class='bx bx-right-arrow'></i>
                         </a>
                         <div class="box-text">
-                            <a href="#" class="box-text-link">
+                            <a href="khianhchayvephiaem.html" class="box-text-link">
                                 <h2 class="movie-title">Khi Anh Chạy Về Phía Em</h2>
                                 <span class="movie-type">I When Fly Towards You</span>
                             </a>
@@ -258,7 +262,7 @@
                 <!-- Movies 7 -->
                 <div class="swiper-slide">
                     <div class="movie-box">
-                        <img src="quycau.jpg" alt="Quỷ Cẩu" class="movie-box-img">
+                        <img src="images/quycau.jpg" alt="Quỷ Cẩu" class="movie-box-img">
                         <a href="#" class="watch-btn play-btn">
                             <i class='bx bx-right-arrow'></i>
                         </a>
@@ -283,12 +287,12 @@
         <div class="movies-content">
             <!-- Movies 1 -->
             <div class="movie-box">
-                <img src="chausinhnhuco.jpg" alt="Trường An Như Cố" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
+                <img src="images/chausinhnhuco.jpg" alt="Trường An Như Cố" class="movie-box-img">
+                <a href="truongannhuco.html" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
                 <div class="box-text">
-                    <a href="#" class="box-text-link">
+                    <a href="truongannhuco.html" class="box-text-link">
                         <h2 class="movie-title">Trường An Như Cố</h2>
                         <span class="movie-type">One And Only</span>
                     </a>
@@ -296,20 +300,20 @@
             </div>
             <!-- Movies 2 -->
             <div class="movie-box">
-                <img src="chiecbatlua.jpg" alt="Lighter And Princess" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
+                <img src="images/chiecbatlua.jpg" alt="Lighter And Princess" class="movie-box-img">
+                <a href="chiecbatluavavaycongchua.html" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
                 <div class="box-text">
-                    <a href="#" class="box-text-link">
-                        <h2 class="movie-title">Chiếc Bật Lửa Và Váy Công Chúa</h2>
+                    <a href="chiecbatluavavaycongchua.html" class="box-text-link">
+                        <h2 class="movie-title">Chiếc Bật Lửa Và Váy<br>Công Chúa</h2>
                         <span class="movie-type">Lighter And Princess</span>
                     </a>
                 </div>
             </div>
             <!-- Movies 3 -->
             <div class="movie-box">
-                <img src="Lovelyrunner.jpg" alt="Lovely Runner" class="movie-box-img">
+                <img src="images/Lovelyrunner.jpg" alt="Lovely Runner" class="movie-box-img">
                 <a href="lovelyrunner.html" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -322,7 +326,7 @@
             </div>
             <!-- Movies 4 -->
             <div class="movie-box">
-                <img src="queenoftears.jpg" alt="Queen Of Tears" class="movie-box-img">
+                <img src="images/queenoftears.jpg" alt="Queen Of Tears" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -335,7 +339,7 @@
             </div>
             <!-- Movies 5 -->
             <div class="movie-box">
-                <img src="cuocchienthuongluu.jpg" alt="Penthouse" class="movie-box-img">
+                <img src="images/cuocchienthuongluu.jpg" alt="Penthouse" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -348,7 +352,7 @@
             </div>
             <!-- Movies 6 -->
             <div class="movie-box">
-                <img src="truongnguyettanminh.jpg" alt="Trường Nguyệt Tẫn Minh" class="movie-box-img">
+                <img src="images/truongnguyettanminh.jpg" alt="Trường Nguyệt Tẫn Minh" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -362,12 +366,12 @@
 
             <!-- Movies 7 -->
             <div class="movie-box">
-                <img src="khianhchayvephiaem.jpg" alt="Khi Anh Chạy Về Phía Em" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
+                <img src="images/khianhchayvephiaem.jpg" alt="Khi Anh Chạy Về Phía Em" class="movie-box-img">
+                <a href="khianhchayvephiaem.html" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
                 <div class="box-text">
-                    <a href="#" class="box-text-link">
+                    <a href="khianhchayvephiaem.html" class="box-text-link">
                         <h2 class="movie-title">Khi Anh Chạy Về Phía Em</h2>
                         <span class="movie-type">I When Fly Towards You</span>
                     </a>
@@ -375,7 +379,7 @@
             </div>
             <!-- Movies 8 -->
             <div class="movie-box">
-                <img src="squidgame.jpg" alt="Squid Game" class="movie-box-img">
+                <img src="images/squidgame.jpg" alt="Squid Game" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -388,7 +392,7 @@
             </div>
             <!-- Movies 9 -->
             <div class="movie-box">
-                <img src="hoyeu.jpg" alt="Hồ Yêu Tiểu Hồng Nương" class="movie-box-img">
+                <img src="images/hoyeu.jpg" alt="Hồ Yêu Tiểu Hồng Nương" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -401,12 +405,12 @@
             </div>
             <!-- Movies 10 -->
             <div class="movie-box">
-                <img src="venhadicon.jpeg" alt="Về Nhà Đi Con" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
+                <img src="images/venhadicon.jpeg" alt="Về Nhà Đi Con" class="movie-box-img">
+                <a href="venhadicon.html" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
                 <div class="box-text">
-                    <a href="#" class="box-text-link">
+                    <a href="venhadicon.html" class="box-text-link">
                         <h2 class="movie-title">Về Nhà Đi Con</h2>
                         <span class="movie-type"></span>
                     </a>
@@ -424,25 +428,25 @@
         <div class="movies-content">
             <!-- Movies 1 -->
             <div class="movie-box">
-                <img src="doremon.jpg" alt="Doraemon" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
+                <img src="images/doremon.jpg" alt="Doraemon" class="movie-box-img">
+                <a href="doraemon.html" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
                 <div class="box-text">
-                    <a href="#" class="box-text-link">
-                        <h2 class="movie-title">Chú Mèo Máy Đến Từ Tương Lai</h2>
+                    <a href="doraemon.html" class="box-text-link">
+                        <h2 class="movie-title">Chú Mèo Máy Đến Từ<br>Tương Lai</h2>
                         <span class="movie-type">Doraemon</span>
                     </a>
                 </div>
             </div>
             <!-- Movies 2 -->
             <div class="movie-box">
-                <img src="meobeosieuquay.jpg" alt="Mèo Béo Siêu Quậy" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
+                <img src="images/meobeosieuquay.jpg" alt="Mèo Béo Siêu Quậy" class="movie-box-img">
+                <a href="meobeosieuquay.html" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
                 <div class="box-text">
-                    <a href="#" class="box-text-link">
+                    <a href="meobeosieuquay.html" class="box-text-link">
                         <h2 class="movie-title">Mèo Béo Siêu Quậy</h2>
                         <span class="movie-type">Garfield</span>
                     </a>
@@ -450,7 +454,7 @@
             </div>
             <!-- Movies 3 -->
             <div class="movie-box">
-                <img src="conan.jpg" alt="Conan" class="movie-box-img">
+                <img src="images/conan.jpg" alt="Conan" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -463,7 +467,7 @@
             </div>
             <!-- Movies 4 -->
             <div class="movie-box">
-                <img src="winx.jpg" alt="Winx" class="movie-box-img">
+                <img src="images/winx.jpg" alt="Winx" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -476,7 +480,7 @@
             </div>
             <!-- Movies 3 -->
             <div class="movie-box">
-                <img src="hellojadoo.jpg" alt="Hello Jadoo" class="movie-box-img">
+                <img src="images/hellojadoo.jpg" alt="Hello Jadoo" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -489,14 +493,13 @@
             </div>
         </div>
     </section>
-    <hr>
     <footer class="footer container">
         <div class="main-footer">
-            <a href="trangchu.html"><img src="logo.png" alt="panda_logo" id="logo-footer"></a>
+            <a href="trangchu.html"><img src="images/logo.png" alt="panda_logo" id="logo-footer"></a>
             <div class="main-footer-1">
                 <h3>Panda Movie</h3>
                 <p>Giới Thiệu</p>
-                <p>Các Gói Dịch Vụ</p>
+                <p>Các Gói Xem Phim</p>
                 <p>Thông Tin</p>
             </div>
             <div class="main-footer-1">

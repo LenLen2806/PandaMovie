@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,13 +17,15 @@
     <header>
         <div class="nav container">
             <!-- Logo -->
-            <a href="trangchu.html"> <img src="logo.png" alt="panda_logo" id="logo"></a>
+            <a href="trangchu.html"> <img src="images/logo.png" alt="panda_logo" id="logo"></a>
             <div class="search-box">
-                <input type="search" name="" id="search-input" placeholder="Nhập tên phim">
-                <i class='bx bx-search-alt'></i>
+                <a href="timkiem.html"><i class='bx bx-search-alt'></i></a>
+                <i class='bx bx-bell'></i>
+                <a href="dangnhap.html"><i class='bx bx-user-circle'></i></a>
             </div>
             <div class="navbar">
-                <ul>
+                <i class='bx bx-menu' onclick="toggleMenu()"></i>
+                <ul class="main-nav" id="menuu">
                     <li>
                         <a href="trangchu.html" class="nav-link">
                             <i class='bx bx-home'></i>
@@ -62,7 +63,7 @@
     <!-- End Header -->
     <!-- Play Movie -->
     <div class="play-container container" style="margin-top: 120px;">
-        <img src="doremon.jpg" alt="Doraemon" class="play-img">
+        <img src="images/doremon.jpg" alt="Doraemon" class="play-img">
         <div class="play-text">
             <h1>Chú Mèo Máy Đến Từ Tương Lai</h1>
             <h3>Doraemon</h3>
@@ -80,11 +81,10 @@
                 <i class='bx bxs-star-half'></i>
                 <i class='bx bx-star'></i>
             </p>
-            <a href="#"><button class="xemphim">XEM PHIM</button></a>
+            <a href="watch_doraemon.html"><button class="xemphim">XEM PHIM</button></a>
         </div>
     </div>
     <!-- Content -->
-    <hr>
     <div class="noidung container">
         <h2>NỘI DUNG CHI TIẾT</h2>
         <p>
@@ -105,11 +105,11 @@
         <h2>LỒNG TIẾNG</h2>
         <div class="actor-main">
             <div class="actor-0">
-                <img src="hoangkhuyet.jpg" alt="Hoàng Khuyết" class="main-actor-img">
+                <img src="images/hoangkhuyet.jpg" alt="Hoàng Khuyết" class="main-actor-img">
                 <p>Hoàng Khuyết</p>
             </div>
             <div class="actor-0">
-                <img src="TNC.jpg" alt="Trương Ngọc Châu" class="main-actor-img">
+                <img src="images/TNC.jpg" alt="Trương Ngọc Châu" class="main-actor-img">
                 <p>Trương Ngọc Châu</p>
             </div>
         </div>
@@ -117,15 +117,15 @@
     <section class="goiy container" id="goiy">
         <h2 class="goiy-heading">CÓ THỂ BẠN SẼ THÍCH</h2>
         <!-- Content -->
-        <div class="movies-content-goiy">
+        <div class="movies-content">
             <!-- Movies 1 -->
             <div class="movie-box">
-                <img src="meobeosieuquay.jpg" alt="Mèo Béo Siêu Quậy" class="movie-box-img">
-                <a href="#" class="watch-btn play-btn">
+                <img src="images/meobeosieuquay.jpg" alt="Mèo Béo Siêu Quậy" class="movie-box-img">
+                <a href="meobeosieuquay.html" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
                 <div class="box-text">
-                    <a href="#" class="box-text-link">
+                    <a href="meobeosieuquay.html" class="box-text-link">
                         <h2 class="movie-title">Mèo Béo Siêu Quậy</h2>
                         <span class="movie-type">Garfield</span>
                     </a>
@@ -133,7 +133,7 @@
             </div>
             <!-- Movies 2 -->
             <div class="movie-box">
-                <img src="conan.jpg" alt="Conan" class="movie-box-img">
+                <img src="images/conan.jpg" alt="Conan" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -146,7 +146,7 @@
             </div>
             <!-- Movies 3 -->
             <div class="movie-box">
-                <img src="winx.jpg" alt="Winx" class="movie-box-img">
+                <img src="images/winx.jpg" alt="Winx" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -159,7 +159,7 @@
             </div>
             <!-- Movies 4 -->
             <div class="movie-box">
-                <img src="hellojadoo.jpg" alt="Hello Jadoo" class="movie-box-img">
+                <img src="images/hellojadoo.jpg" alt="Hello Jadoo" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -172,7 +172,7 @@
             </div>
             <!-- Movies 5 -->
             <div class="movie-box">
-                <img src="chiecbatlua.jpg" alt="Lighter And Princess" class="movie-box-img">
+                <img src="images/chiecbatlua.jpg" alt="Lighter And Princess" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -185,7 +185,7 @@
             </div>
             <!-- Movies 6 -->
             <div class="movie-box">
-                <img src="Lovelyrunner.jpg" alt="Lovely Runner" class="movie-box-img">
+                <img src="images/Lovelyrunner.jpg" alt="Lovely Runner" class="movie-box-img">
                 <a href="lovelyrunner.html" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -198,7 +198,7 @@
             </div>
             <!-- Movies 7 -->
             <div class="movie-box">
-                <img src="queenoftears.jpg" alt="Queen Of Tears" class="movie-box-img">
+                <img src="images/queenoftears.jpg" alt="Queen Of Tears" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -211,7 +211,7 @@
             </div>
             <!-- Movies 8 -->
             <div class="movie-box">
-                <img src="cuocchienthuongluu.jpg" alt="Penthouse" class="movie-box-img">
+                <img src="images/cuocchienthuongluu.jpg" alt="Penthouse" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -224,7 +224,7 @@
             </div>
             <!-- Movies 9 -->
             <div class="movie-box">
-                <img src="kungpu.jpg" alt="Kungfu Panda 5" class="movie-box-img">
+                <img src="images/kungpu.jpg" alt="Kungfu Panda 5" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -237,7 +237,7 @@
             </div>
             <!-- Movies 10 -->
             <div class="movie-box">
-                <img src="masha.jpg" alt="Bé Masha Và Chú Gấu Xiếc" class="movie-box-img">
+                <img src="images/masha.jpg" alt="Bé Masha Và Chú Gấu Xiếc" class="movie-box-img">
                 <a href="#" class="watch-btn play-btn">
                     <i class='bx bx-right-arrow'></i>
                 </a>
@@ -251,11 +251,10 @@
         </div>
     </section>
 
-    <hr>
     <!-- Footer -->
     <footer class="footer container">
         <div class="main-footer">
-            <a href="trangchu.html"><img src="logo.png" alt="panda_logo" id="logo-footer"></a>
+            <a href="trangchu.html"><img src="images/logo.png" alt="panda_logo" id="logo-footer"></a>
             <div class="main-footer-1">
                 <h3>Panda Movie</h3>
                 <p>Giới Thiệu</p>
