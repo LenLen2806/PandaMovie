@@ -1306,7 +1306,7 @@ a .xemphim:hover {
     }
 }
 
-@media(max-width:435px) {
+@media(max-width:430px) {
     .movie-box {
         zoom: 117%;
     }
