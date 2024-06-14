@@ -1308,7 +1308,7 @@ a .xemphim:hover {
 
 @media(max-width:435px) {
     .movie-box {
-        zoom: 110%;
+        zoom: 117%;
     }
 
     .nav #logo {
@@ -1321,24 +1321,25 @@ a .xemphim:hover {
     }
 
     .navbar .main-nav {
-        left: -165px;
-        top: 20px;
+        left: -183px;
+        top: 15px;
         transform: scale(0.7);
         width: 100%;
     }
 
     .home {
-        top: -30px;
+        top: -20px;
         margin-bottom: -170px !important;
     }
 
     .home-text {
         left: -90px;
-        top: -310px;
+        top: -300px;
     }
 
     .navbar .bx-menu {
         transform: scale(0.9);
+
     }
 
     .footer #logo-footer {
